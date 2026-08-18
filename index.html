@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Beginner Yoga Mornings · Hoi An</title>
+<meta name="description" content="Small, chill beginner yoga mornings in Hoi An. All levels welcome. Message to grab a spot." />
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { -webkit-text-size-adjust:100%; }
+  body {
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    color:#3a352e;
+    background:#efe7db;
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap { max-width:480px; margin:0 auto; min-height:100vh; background:#f6f0e6; }
+
+  /* Hero */
+  .hero {
+    position:relative;
+    padding:48px 26px 34px;
+    text-align:center;
+    background:
+      radial-gradient(120% 90% at 50% 0%, #f7ecd8 0%, #f1e3cd 45%, #ecdcc0 100%);
+    overflow:hidden;
+  }
+  .hero:before, .hero:after {
+    content:"🏮";
+    position:absolute; top:14px; font-size:26px; opacity:.55; filter:saturate(.8);
+  }
+  .hero:before { left:18px; }
+  .hero:after  { right:18px; }
+  .kicker {
+    display:inline-block;
+    font-size:12px; letter-spacing:.14em; text-transform:uppercase;
+    color:#a9603c; font-weight:700; margin-bottom:14px;
+  }
+  .hero h1 {
+    font-size:30px; line-height:1.2; font-weight:800; color:#463f34;
+    letter-spacing:-.01em; margin-bottom:12px;
+  }
+  .hero h1 .sun { display:inline-block; }
+  .hero p.sub { font-size:16px; color:#6b6153; max-width:340px; margin:0 auto; }
+
+  /* Points */
+  .points { padding:26px 26px 6px; }
+  .point {
+    display:flex; gap:13px; align-items:flex-start;
+    padding:13px 0; border-bottom:1px solid #e6dbc9;
+  }
+  .point:last-child { border-bottom:none; }
+  .point .ico {
+    flex:0 0 40px; height:40px; width:40px; border-radius:50%;
+    background:#e7edd9; display:flex; align-items:center; justify-content:center;
+    font-size:19px;
+  }
+  .point .txt b { display:block; font-size:15.5px; color:#463f34; }
+  .point .txt span { font-size:14px; color:#7a7062; }
+
+  /* Card / form */
+  .card {
+    margin:22px 20px 8px; padding:24px 22px 26px;
+    background:#fffdf8; border:1px solid #e8ddc9; border-radius:20px;
+    box-shadow:0 8px 26px rgba(90,70,40,.10);
+  }
+  .card h2 { font-size:19px; color:#463f34; margin-bottom:5px; }
+  .card .lead { font-size:14px; color:#7a7062; margin-bottom:18px; }
+  label { display:block; font-size:13px; font-weight:600; color:#5c5346; margin:0 0 6px 2px; }
+  input {
+    width:100%; padding:14px 15px; font-size:16px; color:#3a352e;
+    background:#f7f2e8; border:1.5px solid #e2d6c1; border-radius:12px;
+    margin-bottom:15px; transition:border-color .15s, background .15s;
+  }
+  input:focus { outline:none; border-color:#c98a4b; background:#fffdf8; }
+  input::placeholder { color:#b3a894; }
+
+  .btn {
+    width:100%; padding:16px; font-size:16.5px; font-weight:700; color:#fff;
+    background:#1faf5a; border:none; border-radius:13px; cursor:pointer;
+    display:flex; align-items:center; justify-content:center; gap:9px;
+    box-shadow:0 6px 16px rgba(31,175,90,.28); transition:transform .08s, background .15s;
+  }
+  .btn:active { transform:scale(.985); background:#1c9d51; }
+  .btn svg { width:21px; height:21px; }
+  .err { color:#c0392b; font-size:13px; margin:-8px 2px 12px; display:none; }
+
+  .fineprint { text-align:center; font-size:12.5px; color:#9a8f7d; padding:14px 30px 34px; }
+  .fineprint .fee { color:#6b6153; }
+
+  @media (max-width:360px){ .hero h1{ font-size:26px; } }
+</style>
+</head>
+<body>
+  <div class="wrap">
+
+    <section class="hero">
+      <span class="kicker">Hoi An · Mornings</span>
+      <h1>Beginner yoga mornings <span class="sun">🌅</span></h1>
+      <p class="sub">Small group · all levels · super relaxed. No experience needed — just show up and breathe.</p>
+    </section>
+
+    <section class="points">
+      <div class="point">
+        <div class="ico">🧘</div>
+        <div class="txt"><b>Total beginners welcome</b><span>Gentle stretch &amp; good vibes — no fancy poses, promise.</span></div>
+      </div>
+      <div class="point">
+        <div class="ico">🌿</div>
+        <div class="txt"><b>Small, friendly group</b><span>A tiny morning circle — easy to meet people while you travel.</span></div>
+      </div>
+      <div class="point">
+        <div class="ico">🧺</div>
+        <div class="txt"><b>Mats provided</b><span>Just bring yourself. Riverside calm to start the day.</span></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Grab your spot 👇</h2>
+      <p class="lead">Pop your details in and I'll message you on WhatsApp with the time &amp; place.</p>
+
+      <form id="joinForm" novalidate>
+        <label for="name">Your name</label>
+        <input type="text" id="name" name="name" placeholder="e.g. Sofia" autocomplete="name" />
+
+        <label for="phone">WhatsApp number</label>
+        <input type="tel" id="phone" name="phone" placeholder="e.g. +84 90 123 4567" autocomplete="tel" inputmode="tel" />
+
+        <div class="err" id="err">Please add your name and number 🙂</div>
+
+        <button type="submit" class="btn">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.15-1.75-.86-2-.96-.27-.1-.47-.15-.66.15-.2.3-.76.96-.93 1.16-.17.2-.34.22-.63.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.46.13-.6.13-.14.3-.34.44-.5.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.66-1.6-.9-2.19-.24-.57-.48-.5-.66-.5l-.56-.01c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.08 1.75-.71 2-1.4.25-.7.25-1.28.17-1.4-.07-.13-.27-.2-.57-.35zM12 2C6.48 2 2 6.48 2 12c0 1.77.46 3.42 1.27 4.86L2 22l5.27-1.38A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg>
+          Message me on WhatsApp
+        </button>
+      </form>
+    </section>
+
+    <p class="fineprint">
+      <span class="fee">A tiny <b>150,000 VND (~$6)</b> spot-holding deposit keeps the group small &amp; makes sure everyone actually shows up.</span><br/>
+      Hosted by Badal · beginner-friendly · Hoi An 🏮
+    </p>
+
+  </div>
+
+<script>
+  /* ============================================================
+     CONFIG — edit this ONE value before deploying.
+     Put your WhatsApp number in FULL international format,
+     digits only (no +, no spaces). Example for +84 90 123 4567:
+     ============================================================ */
+  var WHATSAPP_NUMBER = "918160787058";  // Badal's WhatsApp (+91 8160787058)
+
+  var form = document.getElementById("joinForm");
+  var err  = document.getElementById("err");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var name  = document.getElementById("name").value.trim();
+    var phone = document.getElementById("phone").value.trim();
+
+    if (!name || !phone) {
+      err.style.display = "block";
+      return;
+    }
+    err.style.display = "none";
+
+    var msg = "Hi Badal! I want to join the beginner yoga class in Hoi An 🌅 " +
+              "— I'm " + name + ", my number is " + phone + ".";
+
+    var url = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(msg);
+    window.location.href = url;
+  });
+</script>
+</body>
+</html>
