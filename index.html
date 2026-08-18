@@ -5,6 +5,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Beginner Yoga Mornings · Hoi An</title>
 <meta name="description" content="Small, chill beginner yoga mornings in Hoi An. All levels welcome. Message to grab a spot." />
+
+<!-- Meta Pixel — XLR Media Website Pixel (4370960026297590) -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '4370960026297590');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=4370960026297590&ev=PageView&noscript=1"/></noscript>
+<!-- End Meta Pixel -->
+
 <style>
   * { margin:0; padding:0; box-sizing:border-box; }
   html { -webkit-text-size-adjust:100%; }
@@ -169,6 +187,9 @@
               "— I'm " + name + ", my number is " + phone + ".";
 
     var url = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(msg);
+
+    // Fire the Lead conversion, then redirect to WhatsApp.
+    if (typeof fbq === "function") { fbq('track', 'Lead'); }
     window.location.href = url;
   });
 </script>
